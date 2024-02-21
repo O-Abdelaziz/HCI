@@ -8,15 +8,15 @@ var names = [] , ages = []
 for(i=0;i<Person_No;i++){
     var NameFlag = AgeFlag = false
     do{
-        if(NameFlag == false) names[i] = prompt("Enter Person "+(i+1)+" Name")
-        else  names[i] = prompt("Enter Person "+(i+1)+" Name \"Correctly\"")
+        if(NameFlag == false) names[i] = prompt("Enter Person "+(i+1)+" Name (between 3 and 12 characters)")
+        else  names[i] = prompt("Enter Person "+(i+1)+" Name \"Correctly\" (between 3 and 12 characters)")
         NameFlag = true
-    } while(!isNaN(names[i])||names[i].length<3)
+    } while(!isNaN(names[i])||names[i].length<3||names[i].length>12)
     do{
-        if(AgeFlag == false) ages[i] = prompt("Enter Person "+(i+1)+" Age (between 18 and 45 years old)")
-        else ages[i] = prompt("Enter Person "+(i+1)+" Age \"Correctly\" (between 18 and 45 years old)")
+        if(AgeFlag == false) ages[i] = prompt("Enter Person "+(i+1)+" Age (between 18 and 60 years old)")
+        else ages[i] = prompt("Enter Person "+(i+1)+" Age \"Correctly\" (between 18 and 60 years old)")
         AgeFlag = true
-    } while(isNaN(ages[i]) || ages[i]<18 || ages[i]>45)
+    } while(isNaN(ages[i]) || ages[i]<18 || ages[i]>60)
 }
 console.log("Persons Number : "+Person_No)
 for(i=0;i<Person_No;i++){
