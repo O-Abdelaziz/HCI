@@ -2,7 +2,7 @@
 
 ## Tasks
 
-### Task 1: Introduction to HCI
+### Task 1: Javascript
 - [x] [Task Description](https://github.com/O-Abdelaziz/HCI/blob/main/Labs/Day%201/task1.js)
 - **Deadline:** Thursday, February 22, 2024
   
