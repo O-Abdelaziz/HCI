@@ -20,5 +20,5 @@ for(i=0;i<Person_No;i++){
 }
 console.log("Persons Number : "+Person_No)
 for(i=0;i<Person_No;i++){
-    console.log("Person "+(i+1)+" Name : "+names[i]+" And His Age : "+ages[i])
+    console.log("Person "+(i+1)+" IS Named : "+names[i]+" And Is : "+ages[i]+" Years OLd")
 }
