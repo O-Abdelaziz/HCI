@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>color square</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box" id="firstBox" onclick="addRandomBox()"></div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        var firstBox = document.getElementById("firstBox");
+        firstBox.style.backgroundColor = getRandomColor();
+      };
+
+      function addRandomBox() {
+        var container = document.getElementById("container");
+        var box = document.createElement("div");
+        box.className = "box";
+        box.style.backgroundColor = getRandomColor();
+        box.onclick = addRandomBox;
+        container.appendChild(box);
+      }
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+  </body>
+</html>
