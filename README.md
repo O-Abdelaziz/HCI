@@ -6,6 +6,6 @@
 - [x] [Task Description](https://github.com/O-Abdelaziz/HCI/blob/main/Labs/Day%201/task1.js)
 - **Deadline:** Thursday, February 22, 2024
   
-
-
-
+### Task 2: JavaScript HTML DOM
+- [x] [Task Description](https://github.com/O-Abdelaziz/HCI/blob/main/Labs/Day%201/task2.MP4)
+- **Deadline:** Monday, April 22, 2024
