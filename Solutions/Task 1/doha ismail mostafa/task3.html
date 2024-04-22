@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Color Squares</title>
+  <style>
+    .square {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="addSquare()">Add Square</button>
+  <div id="container"></div>
+
+  <script>
+    function addSquare() {
+      const container = document.getElementById('container');
+      const square = document.createElement('div');
+      square.classList.add('square');
+      square.style.backgroundColor = getRandomColor();
+      container.appendChild(square);
+    }
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
