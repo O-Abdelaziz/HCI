@@ -7,5 +7,5 @@
 - **Deadline:** Thursday, February 22, 2024
   
 ### Task 2: Javascript
-- [x] https://github.com/O-Abdelaziz/HCI/blob/main/Labs/Day%201/task2.MP4
+-  https://github.com/O-Abdelaziz/HCI/blob/main/Labs/Day%201/task2.MP4
 - **Deadline:** Monday, April 22, 2024
