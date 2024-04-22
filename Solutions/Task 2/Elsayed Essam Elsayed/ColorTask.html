@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HCI Color Task</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' >
+    
+<style>
+    .container {
+        display: flex;
+    }
+    .square {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        background-color: #220c50;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body onclick="addSquare()">
+    <div class="container">
+        <div class="square" onclick="changeColor(this)"></div>
+    </div>
+    <script src='ColorTask.js' type="text/javascript"></script>
+
+</body>
+</html>
