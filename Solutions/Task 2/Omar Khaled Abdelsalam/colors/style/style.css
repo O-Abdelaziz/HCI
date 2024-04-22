@@ -1,0 +1,17 @@
+.container {
+    display: inline-block;
+    overflow: auto;
+}
+.square {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+    background-color: #305e8f;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+}
+.txt{
+    margin-top:75px;
+    margin-left: 25px;
+}
