@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person Data Input</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Person Data Input</h2>
+    <div>
+      <label for="numPersons">Enter the number of persons:</label>
+      <input type="number" id="numPersons">
+      <button onclick="takeInput()">Submit</button>
+    </div>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody id="dataBody">
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function isValidName(name) {
+      return typeof name === 'string' && name.trim().length > 0;
+    }
+
+    function isValidAge(age) {
+      return !isNaN(age) && age >= 18 && age <= 60;
+    }
+
+    function takeInput() {
+      const numPersonsInput = document.getElementById('numPersons');
+      const numPersons = parseInt(numPersonsInput.value);
+      const dataBody = document.getElementById('dataBody');
+      dataBody.innerHTML = ''; 
+
+      for (let i = 0; i < numPersons; i++) {
+        let name = '';
+        let age = 0;
+        do {
+          name = prompt(`Enter name for person ${i + 1}:`);
+        } while (!isValidName(name));
+
+        do {
+          age = parseInt(prompt(`Enter age for person ${i + 1}:`));
+        } while (!isValidAge(age));
+
+        const newRow = document.createElement('tr');
+        const nameCell = document.createElement('td');
+        const ageCell = document.createElement('td');
+
+        nameCell.textContent = name;
+        ageCell.textContent = age;
+
+        newRow.appendChild(nameCell);
+        newRow.appendChild(ageCell);
+
+        dataBody.appendChild(newRow);
+      }
+    }
+  </script>
+</body>
+</html>
