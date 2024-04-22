@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colours</title>
+<style>
+    .container {
+        display: flex;
+    }
+    .square {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        background-color: #e1970c;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body onclick="addSquare()">
+    <div class="container">
+        <div class="square" onclick="changeColor(this)"></div>
+    </div>
+    <script src="./color.js">
+    </script>
+    
+        
+</body>
+</html>
